@@ -1,0 +1,17 @@
+<p>Mi lista de tareas</p>
+
+<input type="text" #caja placeholder="Escribe algo..">
+<button (click)="agregarTarea(caja.value, caja)">Agregar</button>
+
+
+<hr>
+
+<ul>
+    @for (item of tareas; track $index) {
+      <li>
+        {{ item  }}
+        <button (click)="borrarTarea($index)">Elimnar</button>
+      </li>
+     
+    }
+</ul>
